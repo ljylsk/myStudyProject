@@ -21,6 +21,8 @@ func main() {
 		如何去连接数据库
 	*/
 	// 参考 https://github.com/go-sql-driver/mysql#dsn-data-source-name 获取详情
+
+	// 1.创建表结构
 	dsn := "root:123456@tcp(127.0.0.1:3306)/test_db?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	// err = mil 证明连接正常，否则连接失败
